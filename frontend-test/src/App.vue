@@ -4,18 +4,22 @@
       <b-tab title="Primer ejercicio">
         <FirstExercise></FirstExercise>
       </b-tab>
-      <b-tab title="Segundo ejercicio"></b-tab>
+      <b-tab title="Segundo ejercicio">
+        <SecondExercise></SecondExercise>
+      </b-tab>
     </b-tabs>
   </div>
 </template>
 
 <script>
 import FirstExercise from './components/FirstExercise.vue'
+import SecondExercise from './components/SecondExercise.vue';
 
 export default {
   name: 'App',
   components: {
-    FirstExercise
+    FirstExercise,
+    SecondExercise
   }
 }
 </script>

@@ -32,7 +32,7 @@ export default {
   },
   computed: {
     enableButton() {
-      return this.firstNumber !== null && this.secondNumber !== null && this.firstNumber < this.secondNumber
+      return this.firstNumber !== null && this.secondNumber !== 0 && parseInt(this.firstNumber) < parseInt(this.secondNumber)
     }
   },
   watch: {
