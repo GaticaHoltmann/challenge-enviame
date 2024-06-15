@@ -1,19 +1,23 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <b-tabs>
+      <b-tab title="Primer ejercicio">
+        <FirstExercise></FirstExercise>
+      </b-tab>
+      <b-tab title="Segundo ejercicio"></b-tab>
+    </b-tabs>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import FirstExercise from './components/FirstExercise.vue'
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    HelloWorld,
-  },
-};
+    FirstExercise
+  }
+}
 </script>
 
 <style>
