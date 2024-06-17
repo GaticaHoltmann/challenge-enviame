@@ -34,7 +34,40 @@ app.get('/characters/', async (req, res) => {
       id: character.id,
       name: character.name,
       description: character.description,
-      thumbnail: character.thumbnail
+      thumbnail: character.thumbnail,
+      modified: character.modified
+    }))
+    res.json(characters);
+  } catch (error) {
+    res.status(500).json({ error: error.toString() });
+  }
+})
+
+app.get('/find/', async (req, res) =>{
+  const ts = Date.now()
+  const apikey = process.env.APIKEY
+  const secret = process.env.SECRET
+  const hash = md5(ts + secret + apikey)
+  const nameStartsWith = req.query.name || null
+
+  try {
+    const response = await fetch(`${process.env.ENDPOINT_CHARACTERS}?nameStartsWith=${nameStartsWith}&ts=${ts}&apikey=${apikey}&hash=${hash}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error('Error en el request ${response.status}');
+    }
+    const data = await response.json();
+    const characters = data.data.results.map((character) => ({
+      id: character.id,
+      name: character.name,
+      description: character.description,
+      thumbnail: character.thumbnail,
+      modified: character.modified
     }))
     res.json(characters);
   } catch (error) {
