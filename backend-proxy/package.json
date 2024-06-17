@@ -15,7 +15,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon marvelProxy.mjs"
+    "start": "node marvelProxy.mjs",
+    "serve": "nodemon marvelProxy.mjs"
   },
   "author": "",
   "license": "ISC"

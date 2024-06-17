@@ -55,7 +55,6 @@ export default {
       this.newData.thumbnail.path = this.imageUrl.split('.jpg')[0]
       this.newData.name = this.name
       this.newData.description = this.description
-      console.log('handleok')
     },
     cancelEdit(){
       this.infoCharacter = this.character
