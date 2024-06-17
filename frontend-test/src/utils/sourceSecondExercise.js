@@ -150,7 +150,8 @@ export const localWithMoreServices = () => {
         return current.qtyServices > next.qtyServices ? current : next
     })
 
-    return JSON.stringify(placeWithMoreServices, undefined, 4)
+    // return JSON.stringify(placeWithMoreServices, undefined, 4)
+    return placeWithMoreServices
 }
 
 export const serviceMoreUsed = () => {

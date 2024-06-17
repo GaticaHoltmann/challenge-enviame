@@ -32,7 +32,7 @@
   </div>
 </template>
 <script>
-import { getPlaces, getCouriers, getMaxLimitServicesByPlace, localWithMoreServices, serviceMoreUsed } from '@/utils/sourceSeconExercise';
+import { getPlaces, getCouriers, getMaxLimitServicesByPlace, localWithMoreServices, serviceMoreUsed } from '@/utils/sourceSecondExercise';
 
 export default {
   data() {
