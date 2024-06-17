@@ -5,7 +5,7 @@
       Crear un script (javascript/nodejs) que reciba un rango entre A y B y a partir de este rango se muestren en
       pantalla los números primos.
     </p>
-    <b-card>
+    <b-card class="shadow">
       <h2>Solución</h2>
       <b-form @submit="getPrimes">
         <b-form-group label="Ingresa primer número" label-for="first_number">
