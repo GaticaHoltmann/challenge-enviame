@@ -7,19 +7,25 @@
       <b-tab title="Segundo ejercicio">
         <SecondExercise></SecondExercise>
       </b-tab>
+      <b-tab title="Tercer ejercicio">
+        <ThirdExercise></ThirdExercise>
+      </b-tab>
     </b-tabs>
   </div>
 </template>
 
 <script>
 import FirstExercise from './components/FirstExercise.vue'
-import SecondExercise from './components/SecondExercise.vue';
+import SecondExercise from './components/SecondExercise.vue'
+import ThirdExercise from './components/ThirdExercise.vue'
+
 
 export default {
   name: 'App',
   components: {
     FirstExercise,
-    SecondExercise
+    SecondExercise,
+    ThirdExercise
   }
 }
 </script>
