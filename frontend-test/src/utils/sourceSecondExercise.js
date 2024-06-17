@@ -154,7 +154,7 @@ export const localWithMoreServices = () => {
     return placeWithMoreServices
 }
 
-export const serviceMoreUsed = () => {
+export const serviceMostUsed = () => {
     let servicesUsed = Object.values(places.data).flat().reduce((current, next) => {
         current.push(next['over_carrier_service_id'])
         return current
